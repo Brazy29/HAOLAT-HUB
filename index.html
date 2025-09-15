@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HAOLAT HUB — Elegant Hijabs & Accessories</title>
+    <meta
+      name="description"
+      content="HAOLAT HUB — Elegant Hijabs, Abayas, Perfumes & Accessories. Auto-scrolling product slider, light/dark mode, and premium UI."
+    />
+    <link rel="stylesheet" href="/haolat.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">HAOLAT HUB</div>
+          <div class="tagline">Elegant Hijabs & Accessories</div>
+        </div>
+
+        <div class="controls">
+          <nav>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            🌓
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div>
+          <h1 id="heroTitle">Timeless Elegance in Every Fold</h1>
+          <p>
+            Discover a curated collection of premium hijabs, abayas, perfumes
+            and accessories — crafted with care and presented with a touch of
+            gold.
+          </p>
+          <button id="exploreBtn" class="cta">Explore Collection</button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div
+            class="div-1"
+            style="
+              padding: 12px;
+              border-radius: 12px;
+              background: linear-gradient(180deg, #fff, #f8f8f8);
+              box-shadow: 0 10px 24px rgba(2, 24, 12, 0.04);
+            "
+          >
+            <strong>Free shipping</strong> for orders above ₦25,000
+            <div style="margin-top: 8px; font-size: 13px; color: black">
+              Luxury packaging with every order
+            </div>
+          </div>
+          <div
+            style="
+              padding: 12px;
+              border-radius: 12px;
+              background: linear-gradient(180deg, #fff, #f8f8f8);
+              display: flex;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <div
+              style="
+                width: 54px;
+                height: 54px;
+                border-radius: 12px;
+                background: linear-gradient(180deg, var(--gold), #c99b2b);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #111;
+                font-weight: 800;
+              "
+            >
+              H
+            </div>
+            <div class="div-2">
+              <div style="font-weight: 700">HAOLAT HUB Collections</div>
+              <div style="font-size: 13px; color: black">
+                Signature limited edition
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider -->
+      <section id="products" aria-label="Featured Products">
+        <h3 style="margin: 8px 0 12px">Featured Collection</h3>
+        <div class="slider-wrap" id="sliderWrap">
+          <button class="arrow left" id="prevBtn" aria-label="Previous">
+            &larr;
+          </button>
+          <div class="slider" id="slider">
+            <!-- Slides inserted by JS -->
+          </div>
+          <button class="arrow right" id="nextBtn" aria-label="Next">
+            &rarr;
+          </button>
+        </div>
+        <div class="dots" id="dots"></div>
+
+        <!-- Grid (below slider) -->
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <!-- About + Contact -->
+      <section class="two-col" id="about">
+        <div class="about">
+          <h3>Our Story</h3>
+          <p>
+            At HAOLAT HUB we combine classic modest fashion with modern luxury.
+            Our mission is to curate textiles, fragrances and accessories that
+            celebrate elegance, comfort, and confidence.
+          </p>
+          <p>
+            <em
+              >“We bring you the finest hijabs, abayas, perfumes, and
+              accessories with a touch of class.”</em
+            >
+          </p>
+        </div>
+        <div class="contact" id="contact">
+          <h3 class="contact-us">Contact Us</h3>
+          <form
+            id="contactForm"
+            onsubmit="event.preventDefault(); alert('Thanks — form submission simulated.');"
+          >
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message"></textarea>
+            <a
+              class="send-us"
+              href="https://wa.me/2349169581681"
+              target="_blank"
+              title="WhatsApp"
+              >Send us a Message on WhatsApp💬 </a
+            >
+            <!-- <button class="cta" type="submit">Send Message</button> -->
+          </form>
+
+          <!-- <div class="socials" aria-hidden="false" style="margin-top: 16px">
+           
+            <a href="#" target="_blank" title="Instagram">IG</a>
+            <a href="#" target="_blank" title="Facebook">FB</a>
+          </div> -->
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> HAOLAT HUB — All rights reserved • Designed
+        with gold accents ✨ built by
+        <a href="https://brazyportfolio.netlify.app" target="_blank">BRAZY</a>
+      </footer>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal-backdrop"
+      id="modalBackdrop"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal" id="modal">
+        <button
+          id="closeModal"
+          style="
+            float: right;
+            border: none;
+            background: transparent;
+            font-size: 18px;
+            cursor: pointer;
+          "
+        >
+          ✕
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="/haolat.js"></script>
+  </body>
+</html>
